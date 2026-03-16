@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three.js Day 1 — Scene Basics</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #000; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- DRILL INSTRUCTIONS:
+
+  Build a spinning cube from scratch using Three.js.
+
+  Steps:
+  1. Create a Scene
+  2. Create a PerspectiveCamera (fov: 75, aspect: window ratio, near: 0.1, far: 1000)
+  3. Create a WebGLRenderer, set size to window, append to body
+  4. Create a BoxGeometry (1, 1, 1)
+  5. Create a MeshBasicMaterial ({ color: 0xe94560 })
+  6. Create a Mesh (geometry + material), add to scene
+  7. Position camera at z = 5
+  8. Create an animate() function:
+     - requestAnimationFrame(animate)
+     - Rotate cube: cube.rotation.x += 0.01, cube.rotation.y += 0.01
+     - renderer.render(scene, camera)
+  9. Handle window resize
+
+  BONUS: 
+  - Add a second cube with different color at position (2, 0, 0)
+  - Switch to MeshStandardMaterial + add a PointLight
+  - Add wireframe: true to material
+
+  Time limit: 15 min
+  -->
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    // ---- STEP 1: Scene ----
+    // YOUR CODE HERE
+
+    // ---- STEP 2: Camera ----
+    // YOUR CODE HERE
+
+    // ---- STEP 3: Renderer ----
+    // YOUR CODE HERE
+
+    // ---- STEP 4-6: Geometry + Material + Mesh ----
+    // YOUR CODE HERE
+
+    // ---- STEP 7: Position camera ----
+    // YOUR CODE HERE
+
+    // ---- STEP 8: Animation loop ----
+    function animate() {
+      // YOUR CODE HERE
+    }
+    animate();
+
+    // ---- STEP 9: Resize handler ----
+    window.addEventListener('resize', () => {
+      // YOUR CODE HERE
+    });
+  </script>
+
+  <!--
+  ========================================
+  Time taken: ___
+  Peeked? Yes / No
+  What tripped me: ___
+  ========================================
+  -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+[
+  {
+    "eid": 1,
+    "name": "Sam",
+    "age": 20,
+    "job": "SE",
+    "place": "Delhi",
+    "country": "India"
+  },
+  {
+    "eid": 2,
+    "name": "Alex",
+    "age": 23,
+    "job": "SE",
+    "place": "UP",
+    "country": "India",
+    "hobbies": "Music, Dance"
+  },
+  {
+    "eid": 3,
+    "name": "Marc",
+    "age": 23,
+    "job": "SE",
+    "place": "Ontario",
+    "country": "Canada"
+  }
+]

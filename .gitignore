@@ -8,3 +8,7 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Closed interviews
+interview-prep/companies/orion/
+interview-prep/companies/experion/

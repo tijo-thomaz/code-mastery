@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Day 1 — Basics</title>
+  <style>
+    body { margin: 0; background: #1a1a2e; color: #fff; font-family: sans-serif; overflow: hidden; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+    .box { width: 100px; height: 100px; border-radius: 12px; }
+    .box-1 { background: #e94560; }
+    .box-2 { background: #0f3460; }
+    .box-3 { background: #16c79a; }
+    .controls { display: flex; gap: 12px; }
+    button { padding: 10px 20px; border: none; border-radius: 8px; background: #e94560; color: #fff; cursor: pointer; font-size: 14px; }
+    button:hover { opacity: 0.8; }
+    .row { display: flex; gap: 40px; align-items: center; }
+    h3 { margin: 0 0 8px; font-size: 14px; color: #888; }
+  </style>
+</head>
+<body>
+
+  <h1>GSAP Day 1 — Drill</h1>
+
+  <div class="row">
+    <div>
+      <h3>gsap.to()</h3>
+      <div class="box box-1" id="box1"></div>
+    </div>
+    <div>
+      <h3>gsap.from()</h3>
+      <div class="box box-2" id="box2"></div>
+    </div>
+    <div>
+      <h3>gsap.fromTo()</h3>
+      <div class="box box-3" id="box3"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="btn-to">Play .to()</button>
+    <button id="btn-from">Play .from()</button>
+    <button id="btn-fromTo">Play .fromTo()</button>
+    <button id="btn-all">Play All</button>
+  </div>
+
+  <!-- DRILL INSTRUCTIONS:
+  
+  Load GSAP from CDN (already done below).
+  Fill in the functions to make each box animate:
+
+  1. gsap.to()     → Animate box1: move 200px right, rotate 360°, duration 1s
+  2. gsap.from()   → Animate box2: fade in from opacity 0, slide up from y: 100
+  3. gsap.fromTo() → Animate box3: scale from 0.5 to 1.5, change borderRadius from 0 to 50%
+
+  BONUS: Make "Play All" run all three in sequence using gsap.timeline()
+
+  Time limit: 15 min
+  -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    // ---- DRILL 1: gsap.to() ----
+    // Animate #box1: x: 200, rotation: 360, duration: 1
+    document.getElementById('btn-to').addEventListener('click', () => {
+      // YOUR CODE HERE
+    });
+
+    // ---- DRILL 2: gsap.from() ----
+    // Animate #box2: from opacity: 0, y: 100, duration: 1
+    document.getElementById('btn-from').addEventListener('click', () => {
+      // YOUR CODE HERE
+    });
+
+    // ---- DRILL 3: gsap.fromTo() ----
+    // Animate #box3: from {scale: 0.5, borderRadius: '0%'} to {scale: 1.5, borderRadius: '50%'}, duration: 1
+    document.getElementById('btn-fromTo').addEventListener('click', () => {
+      // YOUR CODE HERE
+    });
+
+    // ---- BONUS: Timeline ----
+    // Run all 3 animations in sequence using gsap.timeline()
+    document.getElementById('btn-all').addEventListener('click', () => {
+      // YOUR CODE HERE
+    });
+  </script>
+
+  <!--
+  ========================================
+  Time taken: ___
+  Peeked? Yes / No
+  What tripped me: ___
+  ========================================
+  -->
+</body>
+</html>

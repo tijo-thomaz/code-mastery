@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[left=0.65in,right=0.65in,top=0.55in,bottom=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\definecolor{linkblue}{HTML}{1a56db}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue
+}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\job}[4]{
+\vspace{4pt}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{#1} & #2 \\
+\textit{#3} & \textit{#4} \\
+\end{tabular*}
+\vspace{2pt}
+}
+
+\begin{document}
+
+% ---- HEADER ----
+\begin{center}
+{\LARGE \textbf{Tijo Thomas}} \\[4pt]
+{\large Senior Frontend Engineer \textbar{} React \textbar{} TypeScript \textbar{} Golang} \\[6pt]
+India \enspace\textbar\enspace
+tijo1293@gmail.com \enspace\textbar\enspace
++91 96056 45591 \\[2pt]
+\href{https://linkedin.com/in/tijo-j-thomaz93}{linkedin.com/in/tijo-j-thomaz93} \enspace\textbar\enspace
+\href{https://tijothomas.dev}{tijothomas.dev}
+\end{center}
+
+% ---- SUMMARY ----
+\section*{Summary}
+
+Senior Frontend Engineer with 8+ years of experience building production React applications in regulated, compliance-driven domains — financial services, online gaming, insurance, and healthcare. Architected a config-driven KYC verification portal serving multiple jurisdictions, led legacy-to-modern migrations using the Strangler Fig pattern, and mentored engineers across frontend and backend teams. Core stack: React, TypeScript, Redux, with Golang backend integration and cloud deployment on AWS and GCP.
+
+% ---- SKILLS ----
+\section*{Technical Skills}
+
+\begin{tabular}{@{} p{2.8cm} p{14cm} @{}}
+\textbf{Frontend} & React 18, Redux Toolkit, Zustand, TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, Tailwind CSS, Material UI, Storybook, Nx Monorepo \\[3pt]
+\textbf{Backend} & Golang (REST APIs, goroutines, worker pools), Node.js, GraphQL \\[3pt]
+\textbf{Testing} & Jest, React Testing Library, Table-driven Tests (Go) \\[3pt]
+\textbf{Cloud / DevOps} & AWS (Lambda, DynamoDB, S3, CloudFront), GCP, Docker, GitHub Actions, GitLab CI, Azure DevOps \\[3pt]
+\textbf{Architecture} & Config-driven UI systems, design systems, component-driven development, monorepos (Nx), WCAG AA accessibility, performance optimization \\[3pt]
+\textbf{Practices} & Agile/Scrum, CI/CD, code reviews, production incident RCA, secure coding, mentoring \\
+\end{tabular}
+
+% ---- EXPERIENCE ----
+\section*{Experience}
+
+\job
+{bet365 Group Ltd}
+{Feb 2023 -- Nov 2025}
+{Software Developer — Frontend, KYC \& Responsible Gambling}
+{Manchester, UK}
+
+\begin{itemize}
+\item Architected a \textbf{config-driven KYC verification portal} using React and TypeScript — regulatory configs per jurisdiction determined form fields, validation rules, step order, and document requirements. Adding a new country required a config update, not new UI code.
+\item Led \textbf{legacy-to-modern migration} using the Strangler Fig pattern — React app embedded in .NET host via iframe, TypeScript bridge handled auth, routing sync, and postMessage communication. Gradual migration with zero downtime.
+\item Built an \textbf{agent-side case management dashboard} for reviewing flagged users — queue management, side-by-side document comparison, approve/reject actions, and timestamped audit trail for compliance.
+\item Owned frontend delivery for \textbf{Responsible Gambling flows} — self-exclusion, timeout, and customer limit journeys with strict \textbf{WCAG AA accessibility} compliance. Regulatory failure if users couldn't complete these flows.
+\item Integrated \textbf{third-party verification SDKs} (Jumio for real-time BDD, Onfido for async EDD) within the step-form engine, with risk-level-based routing between verification paths.
+\item Collaborated with Golang microservices team on GCP — concurrent verification checks using goroutines reduced processing time for multi-step identity verification.
+\item Led \textbf{production incident RCA} — diagnosed a silent API contract break affecting one jurisdiction, mitigated via feature flag in 20 minutes, added contract tests and runtime validation (Zod) to prevent recurrence.
+\item \textbf{Mentored backend engineers} transitioning into React and TypeScript through pair programming, detailed PR reviews with explanations, and progressive task complexity.
+\end{itemize}
+
+\job
+{Infosys Limited}
+{May 2021 -- Jan 2023}
+{Consultant / UI Lead}
+{Bengaluru, India}
+
+\begin{itemize}
+\item Led UI development for \textbf{eBay Motors} and \textbf{Home Depot} — React, Angular, and MarkoJS across enterprise clients.
+\item Established a \textbf{shared design system} using Storybook and \textbf{Nx monorepo architecture} — reduced duplicate components by 60\% across 3 teams and standardized UI delivery.
+\item Built onboarding and analytics dashboards supporting \textbf{Klarna} and escrow payment workflows with data-heavy visualization.
+\item Implemented \textbf{CI/CD pipelines} with automated quality gates — linting, type checking, test coverage, and build verification on every PR.
+\item Resolved a \textbf{state management conflict} across teams (Redux vs Context) by building comparative PoCs — led data-driven decision to adopt Context + useReducer for most state, Redux for complex cross-cutting concerns.
+\item Mentored engineers on testing practices (Jest, React Testing Library) and accessibility fundamentals (WCAG, jest-axe).
+\end{itemize}
+
+\job
+{NetObjex Inc}
+{May 2020 -- May 2021}
+{Software Engineer}
+{Trivandrum, India}
+
+\begin{itemize}
+\item Developed a \textbf{HIPAA-compliant} onboarding and health screening platform with secure handling of sensitive employee data — form validation, data encryption, and access control.
+\item Built React dashboards with compliance-focused workflows — audit logging and role-based UI rendering.
+\item Collaborated with QA and backend teams to reduce regressions through improved test coverage and component isolation.
+\end{itemize}
+
+\job
+{QBurst Technologies}
+{Nov 2018 -- Mar 2020}
+{Engineer}
+{Trivandrum, India}
+
+\begin{itemize}
+\item Built \textbf{GIS-based risk analysis dashboards} with data-heavy visualization — optimized rendering for 10K+ data points using virtualization and Web Workers for off-thread computation.
+\item Developed serverless applications using \textbf{AWS Lambda, DynamoDB, and GraphQL} APIs.
+\item Implemented CI/CD pipelines for static deployments using S3 and CloudFront.
+\end{itemize}
+
+\job
+{Speridian Technologies}
+{Nov 2016 -- Jul 2018}
+{Associate}
+{Cochin, India}
+
+\begin{itemize}
+\item Built a Chrome extension for in-flight Wi-Fi diagnostics — improved support team troubleshooting efficiency.
+\item Developed onboarding and claims UI for \textbf{insurance systems} with compliance-focused user experience.
+\end{itemize}
+
+% ---- PROJECTS ----
+\section*{Projects}
+
+\textbf{PromptShield} — AI Security Dashboard \hfill \href{https://promptshield.vercel.app}{promptshield.vercel.app}
+
+\begin{itemize}
+\item Security-focused dashboard to detect prompt injection and data exfiltration patterns in LLM applications. React + TypeScript frontend with Zustand state management, Golang backend for policy enforcement. Demonstrates full-stack React + Go architecture.
+\end{itemize}
+
+% ---- EDUCATION ----
+\section*{Education}
+
+\textbf{Master of Computer Applications} \hfill 2014 -- 2016 \\
+Mahatma Gandhi University \\[4pt]
+\textbf{Bachelor of Computer Applications} \hfill 2011 -- 2014 \\
+Mahatma Gandhi University
+
+\end{document}

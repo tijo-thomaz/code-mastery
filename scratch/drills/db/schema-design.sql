@@ -1,0 +1,22 @@
+-- GAP #7 — Database Schema Design
+-- Design from scratch. No peeking. Timer: 10 min.
+--
+-- Requirements:
+-- 1. Users table (id, email, name, password_hash, created_at)
+-- 2. Products table (id, name, price, stock, created_at)
+-- 3. Orders table (id, user_id FK, status, total, created_at)
+-- 4. Order_items table (id, order_id FK, product_id FK, quantity, price)
+-- 5. Add proper indexes on columns you filter/join/sort by
+-- 6. Add constraints (UNIQUE, NOT NULL, CHECK, ON DELETE CASCADE)
+--
+-- Key patterns:
+-- - SERIAL PRIMARY KEY for auto-increment
+-- - REFERENCES for foreign keys
+-- - ON DELETE CASCADE vs SET NULL — know the difference
+-- - Index on FK columns and WHERE clause columns
+-- - DECIMAL(10,2) for money, never FLOAT
+-- - TIMESTAMP DEFAULT NOW() for created_at
+--
+-- DELETE THIS COMMENT BLOCK BEFORE YOU START. TYPE FROM MEMORY.
+
+-- YOUR SQL BELOW
